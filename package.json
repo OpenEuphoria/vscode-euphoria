@@ -1,0 +1,40 @@
+{
+    "name": "vscode-euphoria",
+    "displayName": "Euphoria",
+    "version": "1.0.0",
+    "publisher": "openeuphoria",
+    "description": "Euphoria language support and debugging for Visual Studio Code",
+    "author": {
+        "name": "Greg Haberek",
+        "email": "ghaberek@gmail.com"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "bugs": {
+        "url": "https://github.com/OpenEuphoria/vscode-euphoria/issues",
+        "email": "github@openeuphoria.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenEuphoria/vscode-euphoria.git"
+    },
+    "homepage": "https://github.com/OpenEuphoria/vscode-euphoria/blob/master/README.md",
+    "contributes": {
+        "languages": [{
+            "id": "euphoria",
+            "aliases": ["Euphoria", "euphoria"],
+            "extensions": [".e","*.eu","*.ew",".ex","*.exu","*.exw"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "euphoria",
+            "scopeName": "source.euphoria",
+            "path": "./syntaxes/euphoria.tmLanguage.json"
+        }]
+    }
+}
