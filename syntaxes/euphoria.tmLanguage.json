@@ -36,7 +36,7 @@
 				},
 				{
 					"name": "storage.modifier.euphoria",
-					"match": "\\b(export|global|override|public)\\b"
+					"match": "\\b(deprecate|export|global|override|public)\\b"
 				},
 				{
 					"name": "storage.type.euphoria",

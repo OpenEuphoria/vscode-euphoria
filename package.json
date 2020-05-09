@@ -1,7 +1,7 @@
 {
     "name": "vscode-euphoria",
     "displayName": "Euphoria",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "openeuphoria",
     "description": "Euphoria language support and debugging for Visual Studio Code",
     "author": {
@@ -9,7 +9,8 @@
         "email": "ghaberek@gmail.com"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "icon": "images/icon.png",
     "engines": {
@@ -28,13 +29,19 @@
         "languages": [{
             "id": "euphoria",
             "aliases": ["Euphoria", "euphoria"],
-            "extensions": [".e","*.eu","*.ew",".ex","*.exu","*.exw"],
+            "extensions": [".e",".eu",".ew",".ex",".exu","*.exw"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "euphoria",
             "scopeName": "source.euphoria",
             "path": "./syntaxes/euphoria.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "euphoria",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }

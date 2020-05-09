@@ -7,15 +7,17 @@ Euphoria language support and debugging for Visual Studio Code
 ### Declarative language features
 
 - [x] Syntax highlighting
-- [ ] Snippet completion
+- [x] Snippet completion
 - [x] Bracket matching
 - [x] Bracket autoclosing
 - [x] Bracket autosurrounding
 - [x] Comment toggling
-- [ ] Auto indentation
+- [x] Auto indentation
 - [ ] Folding
 
 ### Programmatic language features
+
+**TODO**
 
 - [ ] Hover information
 - [ ] Auto completion
@@ -24,6 +26,12 @@ Euphoria language support and debugging for Visual Studio Code
 - [ ] Formatting
 - [ ] Refactoring
 - [ ] Folding
+
+## Releases
+
+### 1.1.0
+
+Added a bunch of snippets (see [snippets](snippets/README.md))
 
 ### 1.0.0
 
