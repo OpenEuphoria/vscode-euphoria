@@ -29,6 +29,10 @@ Euphoria language support and debugging for Visual Studio Code
 
 ## Releases
 
+### 1.1.1
+
+Fixed broken line in `package.json`
+
 ### 1.1.0
 
 Added a bunch of snippets (see [snippets](snippets/README.md))
