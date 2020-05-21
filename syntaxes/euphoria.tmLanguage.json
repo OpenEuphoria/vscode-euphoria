@@ -1,22 +1,53 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Euphoria",
+	"scopeName": "source.euphoria",
 	"patterns": [
 		{ "include": "#comments" },
+		{ "include": "#entities" },
 		{ "include": "#keywords" },
-		{ "include": "#strings" }
+		{ "include": "#strings"  }
 	],
 	"repository": {
 		"comments": {
 			"patterns": [
 				{
 					"name": "comment.line.double-dash.euphoria",
-					"match": "((--).*)$"
+					"match": "((?:--).*)$"
 				},
 				{
 					"name": "comment.block.euphoria",
 					"begin": "/\\*",
 					"end": "\\*/"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"match": "^\\s*(namespace)\\s+(\\w+)$",
+					"captures":{
+						"1": { "name": "keyword.other.euphoria" },
+						"2": { "name": "entity.name.section" }
+					}
+				},
+				{
+					"match": "^\\s*(?:(deprecate)\\s+)?(?:(export|global|override|public)\\s+)?(function|procedure)\\s+(\\w+)",
+					"captures": {
+						"1": { "name": "invalid.deprecated" },
+						"2": { "name": "storage.modifier.euphoria" },
+						"3": { "name": "storage.type.function" },
+						"4": { "name": "entity.name.function" }
+					}
+				},
+				{
+					"match": "^\\s*(?:(deprecate)\\s+)?(?:(export|global|override|public)\\s+)?(type)\\s+(\\w+)",
+					"captures": {
+						"1": { "name": "invalid.deprecated" },
+						"2": { "name": "storage.modifier.euphoria" },
+						"3": { "name": "storage.type.function" },
+						"4": { "name": "entity.name.type" }
+					}
 				}
 			]
 		},
@@ -28,7 +59,7 @@
 				},
 				{
 					"name": "keyword.operator.euphoria",
-					"match": "\\b(!|and|not|or|xor)\\b"
+					"match": "\\b(!|\\?|and|not|or|xor)\\b"
 				},
 				{
 					"name": "keyword.other.euphoria",
@@ -88,6 +119,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.euphoria"
+	}
 }
