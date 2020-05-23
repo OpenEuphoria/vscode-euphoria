@@ -29,6 +29,10 @@ Euphoria language support and debugging for Visual Studio Code
 
 ## Releases
 
+### 1.2.1
+
+- Fixed outline to skip block comments
+
 ### 1.2.0
 
 - Added symbol outline provider

@@ -25,10 +25,23 @@ class EuphoriaDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
 
     private stripComments(text: string): string {
 
-        let commentStart = text.indexOf('--');
+        let lineCommentStart = text.indexOf('--');
 
-        if (commentStart !== -1) {
-            text = text.substring(0, commentStart);
+        if (lineCommentStart !== -1) {
+            text = text.substring(0, lineCommentStart);
+        }
+
+        let blockCommentStart = text.indexOf('/*');
+        while (blockCommentStart !== -1) {
+
+            let blockCommentEnd = text.indexOf('*/', blockCommentStart);
+            if (blockCommentEnd === -1) {
+                break;
+            }
+
+            text = text.substr(0, blockCommentStart) + text.substr(blockCommentEnd+2);
+
+            blockCommentStart = text.indexOf('/*');
         }
 
         return text.trimRight();
