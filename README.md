@@ -6,28 +6,44 @@ Euphoria language support and debugging for Visual Studio Code
 
 ### Declarative language features
 
-- [x] Syntax highlighting
-- [x] Snippet completion
-- [x] Bracket matching
+These features are provided by configuration files like [`language-configuration.json`](language-configuration.json), [`euphoria.tmLanguage.json`](syntaxes/euphoria.tmLanguage.json), and [`snippets.json`](snippets/snippets.json).
+
+- [x] Auto indentation
 - [x] Bracket autoclosing
 - [x] Bracket autosurrounding
+- [x] Bracket matching
+- [x] Code folding
 - [x] Comment toggling
-- [x] Auto indentation
-- [ ] Folding
+- [x] Snippet completion
+- [x] Syntax highlighting
 
-### Programmatic language features
+### Direct imeplementation features
 
-**TODO**
+These features are implemented directly inside the extension via [`extension.ts`](src/extension.ts).
 
-- [ ] Hover information
+- [x] Basic error checking
+- [x] Basic symbol outline
+- [ ] Debugger integration
+
+### Language server features
+
+These features will be implemented "remotely" using a Euphoria [language server](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide).
+
+- [ ] Advanced code folding
+- [ ] Advanced error checking
 - [ ] Auto completion
-- [ ] Jump to definition
-- [ ] Error checking
-- [ ] Formatting
-- [ ] Refactoring
-- [ ] Folding
+- [ ] Auto formatting
+- [ ] Code refactoring
+- [ ] Hover information
+- [ ] Jump to/peek definition
 
 ## Releases
+
+### 1.3.0
+
+- Added basic error check information (see [diagnostics provider](src/README.md#diagnostics-provider))
+- Added a lot more comments to [`extension.ts`](src/extension.ts)
+- Added configuration settings to disable diagnostics
 
 ### 1.2.1
 
@@ -41,7 +57,7 @@ Euphoria language support and debugging for Visual Studio Code
 
 ### 1.1.1
 
-- Fixed broken line in `package.json`
+- Fixed broken line in [`package.json`](package.json)
 
 ### 1.1.0
 

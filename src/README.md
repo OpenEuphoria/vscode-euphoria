@@ -17,3 +17,18 @@ with. Here are the basic rules that will be applied:
 The parsing engine is pretty basic and makes heavy use of regular expressions. There are bound to
 be errors and probably some missed symbles here and there. Please open a new issues if you find
 anything out of place.
+
+### Diagnostics Provider
+
+The extension will automatically check your code for errors under two conditions:
+
+1. Whenever an editor is *first* activated, either by opening a new document, or by switching to an tab for the first time.
+2. Whenever a document is saved.
+
+In order for the extension to check your code for errors, it will:
+
+- Run your document via `eui -batch -test ${filename}`.
+- If there are any errors in the document, `eui` will exit with a non-zero result.
+- The extension will then open the `ex.err` file and read the error information out of the first few lines.
+
+**NOTE:** This means your `ex.err` will be continuously overwritten while you are saving and naviaging your code! If you do not want this behavior, you can disable diagnostics via **File** > **Preferences** > **Settings** > **Extensions** > **Euphoria**.
