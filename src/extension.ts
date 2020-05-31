@@ -160,6 +160,11 @@ function updateDiagnostics(document: vscode.TextDocument): void {
                     let innerPath = String(matches[1]);
                     let innerLine = Number(matches[2]);
 
+                    // make sure the inner path contains a directory
+                    if (innerPath.indexOf(path.sep) === -1) {
+                        innerPath = "." + path.sep + innerPath;
+                    }
+
                     // make sure the path matches the file we're checking
                     if (innerPath === relativeFileName) {
 

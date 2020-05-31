@@ -39,6 +39,10 @@ These features will be implemented "remotely" using a Euphoria [language server]
 
 ## Releases
 
+### 1.3.1
+
+- Fixed diagnostics not parsing some inner messages
+
 ### 1.3.0
 
 - Added basic error check information (see [diagnostics provider](src/README.md#diagnostics-provider))
