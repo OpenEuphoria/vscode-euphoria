@@ -32,7 +32,7 @@
 					}
 				},
 				{
-					"match": "^\\s*(?:(deprecate)\\s+)?(?:(export|global|override|public)\\s+)?(function|procedure)\\s+(\\w+)",
+					"match": "^\\s*(?:(deprecate)\\s+)?(?:(public|export|global|override)\\s+)?(function|procedure)\\s+(\\w+)",
 					"captures": {
 						"1": { "name": "invalid.deprecated" },
 						"2": { "name": "storage.modifier.euphoria" },
@@ -41,7 +41,7 @@
 					}
 				},
 				{
-					"match": "^\\s*(?:(deprecate)\\s+)?(?:(export|global|override|public)\\s+)?(type)\\s+(\\w+)",
+					"match": "^\\s*(?:(deprecate)\\s+)?(?:(public|export|global|override)\\s+)?(type)\\s+(\\w+)",
 					"captures": {
 						"1": { "name": "invalid.deprecated" },
 						"2": { "name": "storage.modifier.euphoria" },

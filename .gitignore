@@ -1,4 +1,7 @@
 .vscode-test/**
+backup/
+images/logo.png
+Marketplace Token.txt
 vsc-extension-quickstart.md
 vscode-euphoria-*.vsix
 node_modules

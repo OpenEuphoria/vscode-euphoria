@@ -15,9 +15,9 @@
     // Describes indentation rules for a language.
     "indentationRules": {
         // If a line matches this pattern, then all the lines after it should be indented once (until another rule matches).
-        "increaseIndentPattern": "^\\s*(public|export|global|ovderride|deprecate|procedure|function|type|if|for|while|switch|case)",
+        "increaseIndentPattern": "^\\s*(?:(deprecate)\\s+)?(?:(public|export|global|ovderride)\\s+)?(procedure|function|type|if|for|while|switch|case)",
         // If a line matches this pattern, then all the lines after it should be unindented once (until another rule matches).
-        "decreaseIndentPattern": "^\\s*end(procedure|function|type|if|for|while|switch)",
+        "decreaseIndentPattern": "^\\s*(end)\\s+(procedure|function|type|if|for|while|switch)",
     },
     // symbols that are auto closed when typing
     "autoClosingPairs": [

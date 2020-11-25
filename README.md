@@ -39,6 +39,11 @@ These features will be implemented "remotely" using a Euphoria [language server]
 
 ## Releases
 
+### 1.3.2
+
+- Updated package dependencies
+- Minor changes and corrections
+
 ### 1.3.1
 
 - Fixed diagnostics not parsing some inner messages

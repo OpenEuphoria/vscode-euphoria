@@ -1,4 +1,10 @@
 .vscode/**
 .vscode-test/**
+backup/
+images/logo.png
+snippets/README.md
+src/README.md
 .gitignore
+Marketplace Token.txt
 vsc-extension-quickstart.md
+vscode-euphoria-*.vsix
