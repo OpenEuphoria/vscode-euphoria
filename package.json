@@ -93,7 +93,7 @@
         "child_process": "^1.0.2",
         "eslint": "^6.8.0",
         "glob": "^7.1.6",
-        "mocha": "^7.2.0",
+        "mocha": "^10.2.0",
         "typescript": "^3.9.7",
         "vscode-test": "^1.4.1"
     },
